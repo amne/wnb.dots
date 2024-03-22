@@ -38,6 +38,7 @@ export XDEBUG_IP=`ip -4 -j addr show eth0 | jq '.[].addr_info | .[].local' -r`
 export OPENAI_API_KEY="-"
 export OPENAI_API_HOST="http://127.0.0.1:8000"
 export TABBY_DISABLE_USAGE_COLLECTION=1
+export GIT_EXTERNAL_DIFF=difft
 alias bumphelm="pybump bump --file Chart.yaml --level minor"
 alias dockposer="docker run --rm \
     -u '$(id -u):$(id -g)' \

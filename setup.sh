@@ -7,5 +7,5 @@
 sudo apt-get install build-essential procps curl file git
 
 # basic tools
-brew install jq yq nvim nvm kubectl kubens kubectx minikube terraform ripgrep
+brew install jq yq nvim nvm kubectl kubens kubectx minikube terraform ripgrep difftastic
 
