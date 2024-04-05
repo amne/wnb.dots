@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # basic tools
-brew install jq yq nvim nvm ripgrep difftastic rustup gpg2
+brew install jq yq nvim nvm ripgrep difftastic 
+brew install rustup gpg2
+brew install asdf
 
 # rust
 rustup-init -y
