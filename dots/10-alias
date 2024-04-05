@@ -1,0 +1,12 @@
+
+alias wnbdots='/usr/bin/git --git-dir=/home/amne/.wnbdots/ --work-tree=/home/amne'
+alias bumphelm="pybump bump --file Chart.yaml --level minor"
+alias dockposer='function _dockposer() { docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/var/www/html \
+    -w /var/www/html \
+    composer:latest \
+    composer $@ --ignore-platform-reqs
+};_dockposer'
+
+
