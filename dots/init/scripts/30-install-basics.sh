@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # basic tools
 brew install jq yq nvim nvm ripgrep difftastic 
 brew install rustup gpg2

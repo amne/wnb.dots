@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # build-essentials
 sudo apt update
 sudo apt install -y build-essential procps curl file git zip

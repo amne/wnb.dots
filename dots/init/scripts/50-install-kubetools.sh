@@ -1,5 +1,3 @@
-#!/bin/bash
-
 snap install kubectl --channel=1.26/stable
 brew install krew k9s minikube Azure/kubelogin/kubelogin
 
