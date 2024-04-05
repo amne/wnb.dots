@@ -22,6 +22,7 @@ echo ". ~/dots/30-bashrc-alias" >> ~/.bashrc
 . ~/dots/init/scripts/40-install-docker.sh
 . ~/dots/init/scripts/50-install-kubetools.sh
 . ~/dots/init/scripts/60-install-terraform.sh
+. ~/dots/init/scripts/70-install-termtools.sh
 
 echo ". ~/dots/10-profile" >> ~/.profile
 
