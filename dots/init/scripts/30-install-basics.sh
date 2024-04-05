@@ -14,3 +14,5 @@ cargo install tmux-sessionizer
 # mycli
 sudo apt install -y mycli python3-paramiko
 
+# starship
+brew install starship

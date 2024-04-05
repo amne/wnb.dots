@@ -1,11 +1,6 @@
 
-. ~/dots/21-alias
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-. "$HOME/.cargo/env"
-eval "$(starship init bash)"
-
 . "/home/linuxbrew/.linuxbrew/opt/asdf/libexec/asdf.sh"
 
 . "/home/linuxbrew/.linuxbrew/opt/asdf/etc/bash_completion.d/asdf.bash"
+
 
