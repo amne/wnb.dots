@@ -26,5 +26,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-. ~/dots/10-env
 
+
+. "$HOME/.cargo/env"
+. ~/dots/10-profile

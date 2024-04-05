@@ -1,12 +1,12 @@
 # Clone repo
 
 ```bash
-git clone --bare git@github.com:amne/dotfiles.git ~/.wnbdots
+git clone --bare https://github.com/amne/wnb.dots.git ~/.wnbdots
 ```
-
 
 # Git alias
 
+This will be automatically added if you run the init script
 ```bash
 alias wnbdots='/usr/bin/git --git-dir=$HOME/.wnbdots/ --work-tree=$HOME'
 ```
@@ -15,8 +15,6 @@ alias wnbdots='/usr/bin/git --git-dir=$HOME/.wnbdots/ --work-tree=$HOME'
 
 ```bash
 mv .tmux.conf .tmux.conf.off
-mv .profile .profile.off
-mv .bashrc .bashrc.off
 rm setup.sh
 ```
 
@@ -26,5 +24,11 @@ rm setup.sh
 wnbdots checkout
 ```
 
-This step should overwrite some .files. wnbdots alias is in .profile so it should stay on next logins
+# Init
+
+Assumes WSL2
+
+```bash
+~/dots/init/setup.sh
+```
 

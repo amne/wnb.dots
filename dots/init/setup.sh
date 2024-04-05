@@ -7,9 +7,9 @@
 ~/dots/init/scripts/50-install-kubetools.sh
 ~/dots/init/scripts/60-install-terraform.sh
 
-sed 's_. ~/dots/20-env__' -i ~/.profile
-echo ". ~/dots/20-env" >> ~/.profile
+sed 's_. ~/dots/.*__' -i ~/.profile
+echo ". ~/dots/10-profile" >> ~/.profile
 
-sed 's_. ~/dots/30-bashrc__' -i ~/.bashrc
-echo ". ~/dots/30-bashrc" >> ~/.bashrc
+sed 's_. ~/dots/.*__' -i ~/.bashrc
+echo ". ~/dots/20-bashrc" >> ~/.bashrc
 

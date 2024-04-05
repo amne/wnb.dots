@@ -116,5 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. ~/dots/30-bashrc
 
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+. "$HOME/.cargo/env"
+. ~/dots/20-bashrc

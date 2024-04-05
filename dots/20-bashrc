@@ -1,5 +1,5 @@
 
-. ~/dots/10-alias
+. ~/dots/21-alias
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 . "$HOME/.cargo/env"
