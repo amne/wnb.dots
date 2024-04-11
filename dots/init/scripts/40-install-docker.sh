@@ -13,8 +13,9 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 
+export DOCKER_VERSION=5:24.0.9-1~ubuntu.22.04~jammy
 # install docker community edition
-sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install -y docker-ce=$DOCKER_VERSION docker-ce-cli=$DOCKER_VERSION containerd.io docker-buildx-plugin docker-compose-plugin
 
 # fix systemd docker service to remove host override
 sudo sed 's_-H fd://__g' /lib/systemd/system/docker.service -i
