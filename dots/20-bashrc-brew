@@ -1,1 +1,4 @@
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$(find $HOMEBREW_CELLAR -name 'pkgconfig' -type d | grep lib/pkgconfig | tr '\n' ':' | sed s/.$//)
