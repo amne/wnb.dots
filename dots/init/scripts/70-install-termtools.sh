@@ -8,6 +8,6 @@ cp ../../etc/starship.toml ~/.config/starship.toml
 mkdir -p ~/bin
 cp ../../bin/tmx ~/bin/tmx
 
-mkdir ~/work
+mkdir -p ~/work
 tms config --full-path true -p ~/work
 
