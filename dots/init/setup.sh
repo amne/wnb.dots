@@ -14,7 +14,7 @@ echo ". ~/dots/20-bashrc-brew" >> ~/.bashrc
 
 echo ". ~/dots/21-bashrc-rust" >> ~/.bashrc
 echo ". ~/dots/23-bashrc-starship" >> ~/.bashrc
-echo ". ~/dots/25-bashrc-asdf" >> ~/.bashrc
+echo ". ~/dots/24-bashrc-mise" >> ~/.bashrc
 echo ". ~/dots/30-bashrc-alias" >> ~/.bashrc
 
 . ~/dots/*-bashrc-*
