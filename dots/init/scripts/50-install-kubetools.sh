@@ -1,4 +1,4 @@
-snap install kubectl --channel=1.26/stable
+snap install kubectl --channel=1.27/stable
 brew install krew k9s minikube Azure/kubelogin/kubelogin
 
 kubectl krew install ctx

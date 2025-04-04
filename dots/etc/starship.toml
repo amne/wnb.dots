@@ -1,134 +1,267 @@
-[character]
-success_symbol = ""
-vicmd_symbol = ""
-error_symbol = ""
-
-[directory]
-truncate_to_repo = false
-fish_style_pwd_dir_length = 1
-style = "#4169e1"
-format = "[](bg:$style fg:black)[$path[$read_only]($read_only_style)](bg:$style)[](fg:$style) "
-
 [cmd_duration]
 min_time = 50
 show_milliseconds = true
-format = "[ $duration]($style)"
 
-[jobs]
-symbol = " "
 
-# harware config
-[battery]
-unknown_symbol = ""
-empty_symbol = ""
-discharging_symbol = ""
-charging_symbol = ""
-full_symbol = ""
-
-	[[battery.display]]
-	threshold = 10
-	style = "bold fg:red"
-
-	[[battery.display]]
-	threshold = 30
-	style = "fg:#ff8800"
-
-	[[battery.display]]
-	threshold = 50
-	style = "fg:yellow"
-
-[memory_usage]
-disabled = false
-symbol = " "
 
 [time]
 disabled = false
-style = "#4169e1"
-format = "[](bg:$style fg:black)[🕙 $time](bg:$style fg:white)[](fg:$style)"
+format = "()[$time](fg:cyan) "
 
-[status]
-disabled = false
-style = "red"
-symbol = "\\(╯°□°）╯︵ ┻━┻ "
-format = "\b[](bg:$style fg:#4169e1)[$symbol$status](bg:$style)[](fg:$style)"
-
-# VCS
-[git_branch]
-symbol = "  "
-style = "#f05133"
-format = "\b\b[](fg:#4169e1 bg:$style)[$symbol$branch](fg:white bg:$style)[](fg:$style) "
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
+vimcmd_symbol = "[<](bold green)"
 
 [git_commit]
-style = "#f05133"
-format = "\b\b[ ﰖ $hash](fg:white bg:$style)[](fg:$style) "
-
-[git_state]
-am = "APPLYING-MAILBOX"
-am_or_rebase = "APPLYING-MAILBOX/REBASE"
-style = "#f05133"
-format = "\b\b[ \\($state( $progress_current/$progress_total)\\)](fg:white bg:$style)[](fg:$style) "
+tag_symbol = " tag "
 
 [git_status]
+# ahead = ">"
+# behind = "<"
+# diverged = "<>"
+# renamed = "r"
+# deleted = "x"
 style = "#f05133"
 format = "($conflicted$staged$modified$renamed$deleted$untracked$stashed$ahead_behind\b )"
-conflicted = "[ ](fg:88)[   ${count} ](fg:white bg:88)[ ](fg:88)"
+conflicted = "(fg:88)[ c ${count} ](fg:white bg:88)(fg:88)"
 staged = "[M$count ](fg:green)"
 modified = "[M${count} ](fg:red)"
 renamed = "[R${count} ](fg:208)"
-deleted = "[ ${count} ](fg:208)"
+deleted = "[x ${count} ](fg:208)"
 untracked = "[?${count} ](fg:red)"
-stashed = " ${count} "
-ahead = "[ ${count} ](fg:purple)"
-behind = "[ ${count} ](fg:yellow)"
-diverged = "[](fg:88)[  נּ ](fg:white bg:88)[ ${ahead_count} ](fg:purple bg:88)[ ${behind_count} ](fg:yellow bg:88)[ ](fg:88)"
+stashed = "${count} "
+ahead = "[> ${count} ](fg:purple)"
+behind = "[< ${count} ](fg:yellow)"
+diverged = "(fg:88)[<>](fg:white bg:88)[> ${ahead_count} ](fg:purple bg:88)[< ${behind_count} ](bg:88 fg:88)"
 
-[shlvl]
-disabled = false
-style = "fg:bright-blue"
-symbol = " "
 
-[env_var]
-variable = "GAMBLE_TEST_COMMAND"
-format = "gambling with [$env_value]($style)"
-
-# techno specific
 [aws]
-symbol = " "
+symbol = "aws "
+
+[azure]
+symbol = "az "
+
+[buf]
+symbol = "buf "
+
+[bun]
+symbol = "bun "
+
+[c]
+symbol = "C "
+
+[cobol]
+symbol = "cobol "
 
 [conda]
-symbol = " "
+symbol = "conda "
+
+[crystal]
+symbol = "cr "
+
+[cmake]
+symbol = "cmake "
+
+[daml]
+symbol = "daml "
 
 [dart]
-symbol = " "
+symbol = "dart "
+
+[deno]
+symbol = "deno "
+
+[dotnet]
+symbol = ".NET "
+
+[directory]
+read_only = " ro"
+truncate_to_repo = false
+fish_style_pwd_dir_length = 1
+format = "[$path[$read_only]($read_only_style)](fg:cyan) "
+
+[docker_context]
+symbol = "docker "
 
 [elixir]
-symbol = " "
+symbol = "exs "
 
 [elm]
-symbol = " "
+symbol = "elm "
+
+[fennel]
+symbol = "fnl "
+
+[fossil_branch]
+symbol = "fossil "
+
+[gcloud]
+symbol = "gcp "
+
+[git_branch]
+symbol = "git "
+
+[gleam]
+symbol = "gleam "
 
 [golang]
-symbol = " "
+symbol = "go "
+
+[gradle]
+symbol = "gradle "
+
+[guix_shell]
+symbol = "guix "
+
+[hg_branch]
+symbol = "hg "
 
 [java]
-symbol = " "
+symbol = "java "
 
-[nix_shell]
-symbol = " "
+[julia]
+symbol = "jl "
+
+[kotlin]
+symbol = "kt "
+
+[lua]
+symbol = "lua "
 
 [nodejs]
-symbol = " "
+symbol = "nodejs "
+
+[memory_usage]
+symbol = "memory "
+disabled = false
+
+[meson]
+symbol = "meson "
+
+[nats]
+symbol = "nats "
+
+[nim]
+symbol = "nim "
+
+[nix_shell]
+symbol = "nix "
+
+[ocaml]
+symbol = "ml "
+
+[opa]
+symbol = "opa "
+
+[os.symbols]
+AIX = "aix "
+Alpaquita = "alq "
+AlmaLinux = "alma "
+Alpine = "alp "
+Amazon = "amz "
+Android = "andr "
+Arch = "rch "
+Artix = "atx "
+CachyOS = "cach "
+CentOS = "cent "
+Debian = "deb "
+DragonFly = "dfbsd "
+Emscripten = "emsc "
+EndeavourOS = "ndev "
+Fedora = "fed "
+FreeBSD = "fbsd "
+Garuda = "garu "
+Gentoo = "gent "
+HardenedBSD = "hbsd "
+Illumos = "lum "
+Kali = "kali "
+Linux = "lnx "
+Mabox = "mbox "
+Macos = "mac "
+Manjaro = "mjo "
+Mariner = "mrn "
+MidnightBSD = "mid "
+Mint = "mint "
+NetBSD = "nbsd "
+NixOS = "nix "
+Nobara = "nbra "
+OpenBSD = "obsd "
+OpenCloudOS = "ocos "
+openEuler = "oeul "
+openSUSE = "osuse "
+OracleLinux = "orac "
+Pop = "pop "
+Raspbian = "rasp "
+Redhat = "rhl "
+RedHatEnterprise = "rhel "
+RockyLinux = "rky "
+Redox = "redox "
+Solus = "sol "
+SUSE = "suse "
+Ubuntu = "ubnt "
+Ultramarine = "ultm "
+Unknown = "unk "
+Uos = "uos "
+Void = "void "
+Windows = "win "
+
+[package]
+symbol = "pkg "
+
+[perl]
+symbol = "pl "
 
 [php]
-symbol = " "
+symbol = "php "
+
+[pijul_channel]
+symbol = "pijul "
+
+[pulumi]
+symbol = "pulumi "
+
+[purescript]
+symbol = "purs "
 
 [python]
-symbol = " "
+symbol = "py "
+
+[quarto]
+symbol = "quarto "
+
+[raku]
+symbol = "raku "
 
 [ruby]
-symbol = " "
+symbol = "rb "
 
 [rust]
-symbol = " "
-style = "fg:#ffa07a"
+symbol = "rs "
 
+[scala]
+symbol = "scala "
+
+[spack]
+symbol = "spack "
+
+[solidity]
+symbol = "solidity "
+
+[status]
+symbol = "[x $status](bold red) "
+
+[sudo]
+symbol = "sudo "
+
+[swift]
+symbol = "swift "
+
+[typst]
+symbol = "typst "
+
+[terraform]
+symbol = "terraform "
+
+[zig]
+symbol = "zig "

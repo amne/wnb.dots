@@ -1,7 +1,7 @@
 #!/bin/bash
 
 asdf plugin add php
-asdf install php latest:8.2
+asdf install php 8.3:latest
 
 echo "zend_extension=opcache.so" > $(asdf where php)/conf.d/10-opcache.ini
 
