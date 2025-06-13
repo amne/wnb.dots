@@ -1,12 +1,19 @@
+format = '''
+[┌─](bold green) $all
+[└─](bold green) $time$character '''
+
+
+[line_break]
+disabled = true
+
 [cmd_duration]
 min_time = 50
 show_milliseconds = true
 
 
-
 [time]
 disabled = false
-format = "()[$time](fg:cyan) "
+format = "[$time](fg:cyan) "
 
 [character]
 success_symbol = "[>](bold green)"
@@ -35,6 +42,9 @@ ahead = "[> ${count} ](fg:purple)"
 behind = "[< ${count} ](fg:yellow)"
 diverged = "(fg:88)[<>](fg:white bg:88)[> ${ahead_count} ](fg:purple bg:88)[< ${behind_count} ](bg:88 fg:88)"
 
+[kubernetes]
+disabled = false
+symbol = "k8s "
 
 [aws]
 symbol = "aws "
